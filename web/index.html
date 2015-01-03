@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>hero.js: A simple and flexible offline storage and geolocation javascript library</title>
+        <meta name="description" content="A simple and flexible offline storage and geolocation javascript library">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+       <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+       <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+            <section class="clearfix">
+                <h1><a href="index.html">hero.js</a></h1>
+                <nav>
+                    <ul>
+                        <li id="btnHome"><a href="#hero">What is it</a></li>
+                        <li id="btnInstallation"><a href="#installation">Installation</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="documentation.html">Documentation</a></li>
+                       
+                    </ul>
+                </nav>
+            </section>
+        </header>
+
+        <div id="logo">
+            <a href="#hero" title="What is hero.js"><img id="logoImg" src="img/logo.png" alt="Hero.js Logo" width="256"></a>
+        </div>
+
+        <section id="container">
+            <div class="placeholder" id="hero"></div>
+            <section class="clearfix">
+                <h1>What is it</h1>
+                <aside>
+                    <p>
+                        Hero.js is a Javascript library that provides offline storage and geolocation functionalities using HTML5 APIs (<a href="http://en.wikipedia.org/wiki/Web_storage">Web Storage</a> and <a href="http://en.wikipedia.org/wiki/Geolocation">Geolocation</a>).
+                    </p>
+                    <p>
+                        It exposes 2 main objects, <a href="documentation.html#hero.db">hero.db</a> and <a href="documentation.html#hero.geo">hero.geo</a>
+                        <br>
+                        *<small>
+                            <a href="documentation.html#hero.cache">hero.cache</a> and <a href="documentation.html#hero.nav">hero.nav</a> are the other objects in the library but might be removed from the library in the future.
+                        </small>
+                    </p>             
+                   <br>
+                    <a href="#" class="button">Fork it <small>on GitHub</small></a>
+                    <a href="downloads.html" class="button">Download <small>(v0.5)</small></a>
+                    
+                </aside>
+
+                <article>
+                    <div class="output" style="text-align:center; margin-top: 110px;">
+                            You are at <span id="city" class="bold"></span>, in <span id="country" class="bold"></span>
+                            <br>
+                            The current weather condition is <span id="status" class="bold"></span>, with <span id="degrees" class="bold"></span> °C.
+
+                    </div>
+                </article>
+            </section>
+            
+            <!-- Installation Section -->
+            <div class="placeholder" id="installation"></div>
+            <section class="clearfix">
+                <h1>Installation</h1>
+                <aside>
+                    <p style="margin-top:23px;">
+                        <b>Step one: Download the library</b>
+                    </p>
+                    
+                    <p style="margin-top:20px;">
+                        <b>Step two: Include the script on your HTML file</b>
+                    </p>
+                    
+                    <p style="margin-top:35px;">
+                        <b>Step three: Let hero do it's thing!</b>
+                    </p>
+
+                    <p>
+                        PS: Don't forget to go through the <a href="documentation.html">documentation</a>
+                    </p>
+                </aside>
+
+                <article>
+                    <br>
+                    <div>
+                        <a href="downloads/hero-0.5.min.js" class="button">Download <small>(Latest stable release)</small></a>
+                    </div>
+                    <br>
+                    <div class="output">
+                        &lt;script src="hero.min.js"&gt;&lt;script&gt;
+                    </div>
+                    <br>
+                    <div class="output">
+                        //<i>Sample code</i> <br>
+                        hero.db.on('test-table').insert({name: 'foo'}).ok();<br>
+                        data = hero.db.get('test-table'); <br>
+                        //<i>data = {name: 'foo'}</i> <br>
+                        <br>
+                        hero.geo.init(function(data){ <br> /*do something with the geolocation data here*/ <br> });
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <div class="centered" style="margin:100px 0;">
+            <img src="img/logo.png" alt="Hero Logo">
+            <p>hero.js is an Open-Source project by <a href="http://github.com/ivanruby">Ivan Ruby</a> licensed under the <a href="#">MIT License</a>. <br>Feel free to use and contribute!</p>
+        </div>
+
+        <footer>
+            <p class="centered">
+                hero.js &copy; 2014 | Library and Website crafted with &#10084; by <a href="http://www.ivanruby.com">Ivan Ruby</a>
+            </p>
+        </footer>
+
+        <!-- jQuery include -->
+        <script src="js/vendor/jquery-1.10.2.min.js"></script> 
+
+        <!-- hero.js and support -->
+        <script src="js/countries.js"></script>
+        <script src="js/hero-0.5.js"></script>
+
+        <!-- Custom scripts -->
+        <script src="js/initial.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
+
