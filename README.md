@@ -1,6 +1,7 @@
 heroJS
 =========
-![heroJS logo](https://github.com/ivanruby/herojs/master/assets/logo/hero3A.jpg)
+![heroJS logo](https://github.com/ivanruby/herojs/blob/master/assets/logo/hero3A.jpg)
+
 Hero.js is a Javascript Library built to provide Local or Offline Storage, Geo-location and caching functionality to web pages.
 It makes use of HTML5 localStorage, geolocation and cache objects to provide offline storage and information related to the location of the device accessing the web page.
 
