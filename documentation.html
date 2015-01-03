@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Documentation | Hero.JS: A simple and flexible offline storage and geolocation library</title>
-        <meta name="description" content="">
+        <meta name="description" content="A simple and flexible offline storage and geolocation javascript library">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -18,16 +18,11 @@
 
       <!-- highlight.js css -->
       <link rel="stylesheet" href="css/monokai_sublime.css">
+      <link rel="stylesheet" href="css/main.css">
 
-      <link rel="stylesheet" href="css/main.css">   
-        
-
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+      <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
         <header>
             <section class="clearfix">
                 <h1><a href="index.html">hero.js</a></h1>
@@ -54,49 +49,43 @@
                         <li><a href="#heroversion">hero.version</a></li>
                         <li><a href="#heroconfig">hero.config</a></li>
                         <li><a href="#herolog">hero.log</a></li>
+                        <li><a href="#herodb">hero.db</a>
+                            <ul id="herodblist">
+                              <li><a href="#herodbregister">hero.db.register</a></li>
+                              <li><a href="#herodbon">hero.db.on</a></li>
+                              <li><a href="#herodbfrom">hero.db.from</a></li>
+                              <li><a href="#herodbget">hero.db.get</a></li>
+                              <li><a href="#herodbok">hero.db.ok</a></li>
+                              <li><a href="#herodbinsert">hero.db.insert</a></li>
+                              <li><a href="#herodbupdate">hero.db.update</a></li>
+                              <li><a href="#herodbremove">hero.db.remove</a></li>
+                              <li><a href="#herodbtruncate">hero.db.truncate</a></li>
+                              <li><a href="#herodbsort">hero.db.sort</a></li>
+                              <li><a href="#herodbsearch">hero.db.search</a></li>
+                              
+                            </ul>
+                        </li>
+                        <li><a href="#herogeo">hero.geo</a>
+                            <ul id="herogeolist">
+                              <li><a href="#herogeoisenabled">hero.geo.isEnabled</a></li>
+                              <li><a href="#herogeoinit">hero.geo.init</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#herocache">hero.cache</a>
+                            <ul id="herocachelist">
+                              <li><a href="#herocachecreate">hero.cache.create</a></li>
+                              <li><a href="#herocacherequire">hero.cache.require</a></li>
+                              <li><a href="#herocachenetwork">hero.cache.network</a></li>
+                              <li><a href="#herocachefallback">hero.cache.fallback</a></li>
+                              <li><a href="#herocachegenerate">hero.cache.generate</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#heronav">hero.nav</a>
+                            <ul id="heronavlist">
+                              <li><a href="#heronavisenabled">hero.nav.isEnabled</a></li>
+                            </ul>
+                        </li>
                       </ul>
-                  </p>
-                  
-                  <p style="margin-top: 100px;">
-                      Objects:
-                        <ul class="list">
-                          <li><a href="#herodb">hero.db</a>
-                              <ul id="herodblist">
-                                <li><a href="#herodbregister">hero.db.register</a></li>
-                                <li><a href="#herodbon">hero.db.on</a></li>
-                                <li><a href="#herodbfrom">hero.db.from</a></li>
-                                <li><a href="#herodbget">hero.db.get</a></li>
-                                <li><a href="#herodbok">hero.db.ok</a></li>
-                                <li><a href="#herodbinsert">hero.db.insert</a></li>
-                                <li><a href="#herodbupdate">hero.db.update</a></li>
-                                <li><a href="#herodbremove">hero.db.remove</a></li>
-                                <li><a href="#herodbtruncate">hero.db.truncate</a></li>
-                                <li><a href="#herodbsort">hero.db.sort</a></li>
-                                <li><a href="#herodbsearch">hero.db.search</a></li>
-                                
-                              </ul>
-                          </li>
-                          <li><a href="#herogeo">hero.geo</a>
-                              <ul id="herogeolist">
-                                <li><a href="#herogeoisenabled">hero.geo.isEnabled</a></li>
-                                <li><a href="#herogeoinit">hero.geo.init</a></li>
-                              </ul>
-                          </li>
-                          <li><a href="#herocache">hero.cache</a>
-                              <ul id="herocachelist">
-                                <li><a href="#herocachecreate">hero.cache.create</a></li>
-                                <li><a href="#herocacherequire">hero.cache.require</a></li>
-                                <li><a href="#herocachenetwork">hero.cache.network</a></li>
-                                <li><a href="#herocachefallback">hero.cache.fallback</a></li>
-                                <li><a href="#herocachegenerate">hero.cache.generate</a></li>
-                              </ul>
-                          </li>
-                          <li><a href="#heronav">hero.nav</a>
-                              <ul id="heronavlist">
-                                <li><a href="#heronavisenabled">hero.nav.isEnabled</a></li>
-                              </ul>
-                          </li>
-                        </ul>
                   </p>
                 </aside>
 
@@ -686,15 +675,13 @@ FALLBACK:
         <!-- jQuery include -->
         <script src="js/vendor/jquery-1.10.2.min.js"></script> 
 
-        <!-- hero.js and support -->
-        <script src="js/countries.js"></script>
-        <script src="js/hero-0.5.js"></script>
-
+        
         <!-- SinglePavNav plugin -->
         <script src="js/jquery.singlePageNav.js"></script>
         <script>
           $('.list').singlePageNav({
-            currentClass: 'current'
+            currentClass: 'current',
+            updateHash: true
           });
         </script>
 

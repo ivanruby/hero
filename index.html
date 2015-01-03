@@ -15,6 +15,7 @@
        <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/monokai_sublime.css">
         <link rel="stylesheet" href="css/main.css">
         
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -101,18 +102,18 @@
                     <div>
                         <a href="downloads/hero-0.5.min.js" class="button">Download <small>(Latest stable release)</small></a>
                     </div>
+                    
+<pre><code>&lt;script src="hero.min.js"&gt;&lt;/script&gt;</code></pre>
                     <br>
-                    <div class="output">
-                        &lt;script src="hero.min.js"&gt;&lt;script&gt;
-                    </div>
-                    <br>
-                    <div class="output">
-                        //<i>Sample code</i> <br>
-                        hero.db.on('test-table').insert({name: 'foo'}).ok();<br>
-                        data = hero.db.get('test-table'); <br>
-                        //<i>data = {name: 'foo'}</i> <br>
-                        <br>
-                        hero.geo.init(function(data){ <br> /*do something with the geolocation data here*/ <br> });
+<pre><code>//Sample code
+hero.db.on('test-table').insert({name: 'foo'}).ok();
+data = hero.db.get('test-table');
+// data = {name: 'foo'}
+hero.geo.init(function(data){
+/*do something with the geolocation data here*/
+});</code></pre>
+                        
+                        
                     </div>
                 </article>
             </section>
@@ -139,6 +140,14 @@
         <!-- Custom scripts -->
         <script src="js/initial.js"></script>
         <script src="js/main.js"></script>
+
+        <!-- Highlight.js -->
+         <!-- Highlight.js -->
+        <script src="js/highlight.pack.js"></script>   
+  
+        <script>
+          hljs.initHighlightingOnLoad();
+        </script>
     </body>
 </html>
 
