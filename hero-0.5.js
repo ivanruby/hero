@@ -413,8 +413,8 @@
 					return true;
 			return false;
 		}
-		else
-			return false
+		
+		return false;
 	}
 
 	/**
@@ -455,7 +455,7 @@
 
 	/**
 	 * _dbRemoveFromTable() removes the objects found on a 
-	 * table given array of indexes to matched
+	 * table given an array of indexes to matched
 	 *
 	 * @param <String> table
 	 * @param <Array> indexesToBeRemoved
@@ -474,18 +474,18 @@
 				var existingCollection = _dbGetFromTable(table), 
 		    		newCollection = [];
 
-		    for (var i = 0; i < indexesToBeRemoved.length; i++) {
-		    	// Remove array elements by marking them with '#_$'
-		    	existingCollection[indexesToBeRemoved[i]] = '#_$';		    	
-		    	countOfElementsRemoved++;
-		    }
+			    for (var i = 0; i < indexesToBeRemoved.length; i++) {
+			    	// Remove array elements by marking them with '#_$'
+			    	existingCollection[indexesToBeRemoved[i]] = '#_$';		    	
+			    	countOfElementsRemoved++;
+			    }
 
-		    for (var i = 0; i < existingCollection.length; i++) {
+			    for (var i = 0; i < existingCollection.length; i++) {
 
-		    	// Only push unmarked elements to newCollection
-		    	if (existingCollection[i] != '#_$')
-		    		newCollection.push(existingCollection[i]);
-		    }    	   	    
+			    	// Only push unmarked elements to newCollection
+			    	if (existingCollection[i] != '#_$')
+			    		newCollection.push(existingCollection[i]);
+			    }    	   	    
 			}
 			else
 				success = false;			
