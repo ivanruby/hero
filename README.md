@@ -9,12 +9,15 @@ It makes use of HTML5 localStorage, geolocation and cache objects to provide off
 Functionalities
 ===========
 
-- @TODO
+- hero.db : Object that implements DB operations (Insert, Get, Update, Remove, Search and Sort) with method chaining. 
+- hero.geo : Object that implements geolocation. Uses metwit's api as a default geolocation resolver
+- hero.cache: Object programmatically creates a cache manifest file (as of now it just prints the contents supposed to be on the manifest on the console)
 
 TODO:
 ================
 
-- @TODO
+- Create and implement test cases
+- Find a better way to implement method chaining (without having to use the .ok() )
 
 
 License
