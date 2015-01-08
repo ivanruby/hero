@@ -19,6 +19,8 @@ TODO:
 - Create and implement test cases
 - Find a better way to implement method chaining (without having to use the .ok() )
 - Implement better queries on hero.db
+- Implement db schema
+- Implement a auto-increment field
 
 License
 =======
