@@ -10,7 +10,7 @@
 				0.2.0 hero.nav and Code structuring
 				0.3.0 hero.cache
 				0.4.0 hero.geo
-				0.5.0 hero.db
+				0.5.0 hero.db *here now*
 				0.9.0 Unit tests passed and refactoring method inter-communication using events
 				0.9.0a Aplha release (Limited. Webpage complete)
 				0.9.0b Beta release (Public. Documentation complete)
@@ -952,5 +952,3 @@
 	root.hero = hero;
 
 }).call(this);
-
-
